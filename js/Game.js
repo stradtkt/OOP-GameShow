@@ -64,5 +64,18 @@ class Game {
         const message = document.getElementById('game-over-message');
         button.textContent = 'Play Again';
         this.started = false;
+
+        switch(condition) {
+            case 'win': {
+                overlay.classList.value = 'win animated zoomIn';
+                message.textContent = "You won!";
+                break;
+            }
+            case 'lost': {
+                overlay.classList.value = 'lose animated zoomIn';
+                message.textContent = "You lost :(";
+                break;
+            }
+        }
     }
 }
