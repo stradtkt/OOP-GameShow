@@ -35,5 +35,12 @@ class Phrase {
         return this.letters.indexOf(target) === -1 ? true : false;
     }
 
-    
+    showMatchedLetter(target) {
+        const lettersToShow = this.squares.filter((letter) => letter.classList.contains(target));
+
+        lettersToShow.forEach((letter) => {
+            letter.classList.remove('hide');
+            letter.classList.add('show');
+        });
+    }
 }
