@@ -107,7 +107,9 @@ button {
   width: 15px;
 }
 
-
+.hide {
+  visibility: hidden;
+}
 
 .show {
   color: #fff;
@@ -201,4 +203,8 @@ button {
 
 .lose a {
   color: var(--color-lose);
+}
+.blue-text {
+  color: dodgerblue;
+  font-weight: 700;
 }

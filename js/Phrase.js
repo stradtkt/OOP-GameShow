@@ -11,22 +11,22 @@ class Phrase {
 
     addToDisplay(target) {
         this.letters.forEach((el) => {
-            const li = document.createElement('li');
-            li.textContent = el;
-            li.style.zIndex = -1;
+            const letterLi = document.createElement('li');
+            letterLi.textContent = el;
+            letterLi.style.zIndex = -1;
             if(el === ' ') {
-                li.className = 'hide space';
+                letterLi.className = 'hide space';
             } else {
-                li.className = `hide letter ${el}`;
+                letterLi.className = `hide letter ${el}`;
             }
-            this.squares.push(li);
-            target.appendChild(li)
+            this.squares.push(letterLi);
+            target.appendChild(letterLi)
         });
 
         this.squares.forEach((box) => {
            if(box.classList.contains('letter')) {
                box.classList.remove('hide');
-               box.className += 'animated zoomIn';
+               box.className += ' animated zoomIn';
            }
         });
     }
